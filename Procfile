@@ -1,1 +1,1 @@
-web: gunicorn Amanpreet_Flask:app
+web: gunicorn amanpreet_flask:app
