@@ -7,17 +7,14 @@ Original file is located at
     https://colab.research.google.com/drive/1UQVb7p-3qZe0xlF7PtXUyRS-JXvVDU9h
 """
 
-!pip install flask-ngrok
 
 import numpy as np
 import pickle
 import pandas as pd
 from flask import Flask, request
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
 
 app = Flask(__name__)
-run_with_ngrok(app)
 # Loading the trained ML model through Logistic Reression as the pickle file
 LR_model = pickle.load(open('LogisticRegresion_FishMarket_model.pkl', 'rb'))
 @app.route('/')
