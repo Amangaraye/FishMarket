@@ -1,1 +1,1 @@
-web: gunicorn FlaskApp:app
+web: gunicorn amanpreet_fishmarket_flask_api:app
